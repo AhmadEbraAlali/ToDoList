@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#mainProject {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../IMG/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continerOfPage {
+    width: 80%;
+    height: 80vh;
+    padding: 30px;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #FF87AB;
+    display: flex;
+}
+
+.slideDash {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    /* width: 100%; */
+    /* padding: 10px 100px 10px 100px; */
+}
+
+#goToCalender a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#addCard,
+#goToCalender,
+#goToStars {
+    margin: 10px;
+    border: none;
+    background: none;
+    transition: 0.5s ease;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#addCard:hover {
+    color: rgb(18, 255, 109);
+    transform: scale(1.5);
+}
+
+#goToCalender:hover {
+    color: red;
+    transform: scale(1.3);
+}
+
+#goToStars:hover {
+    color: #FF87AB;
+    transform: scale(1.3);
+}
+
+/* ----------------------- */
+.titalMainDash {
+    margin-bottom: 20px;
+}
+
+.cardContiner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* margin: 20px 0px 20px 0px; */
+    justify-content: flex-start;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 25 */
+/* .card.fade-out {
+  transform: scale(1.5) rotate(15deg);
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 0.5s ease;
+} */
+.triangle-piece {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid white;
+    opacity: 1;
+    animation: explodeAway 0.8s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes explodeAway {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5) translate(
+            calc(-50px + 100px * var(--randX, 0.5)),
+            calc(-50px + 100px * var(--randY, 0.5))
+        );
+        opacity: 0;
+    }
+}
+/* ----- */
+.card {
+    margin: 20px 0;
+    width: 45%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.Div2Continer {
+    width: 100%;
+    margin: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mainDash {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cardMainDash {
+    margin: 5px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.StarCard {
+    display: flex;
+    align-items: center;
+}
+
+.StarCard button {
+    border: none;
+    background: none;
+    color: #f3c8d59c;
+    font-size: 20px;
+}
+
+.cardTitle {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+    resize: none;
+}
+
+.cardDelete button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #FF87AB;
+    font-size: 20px;
+}
+
+.dateInCardInfo {
+    margin-top: 20px;
+}
+
+.active-star {
+
+    color: #FF87AB;
+}
+
+#goToStars.active-star {
+    color: #FF87AB;
+    transform: scale(1.4);
+}
+
+/* تخصيص Scrollbar لمتصفحات Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* عرض الشريط */
+}
+
+/* الخلفية وراء الشريط */
+::-webkit-scrollbar-track {
+    background: #FF87AB;
+    border-radius: 10px;
+}
+
+/* لون السيكرول نفسه */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #FF87AB; /* شكل عصري بحدود بيضاء */
+}
+
+/* عند التحويم hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
